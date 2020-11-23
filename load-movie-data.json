@@ -23,6 +23,17 @@
         {
             "PutRequest": {
                 "Item": {
+                    "ReleasedYear": { "N": "2013"},
+                    "MovieTitle": {"S": "The Wolf of Wall Street"},
+                    "rating": {"N": "8.2"},
+                    "rank": {"N": "13"},
+                    "running_time_min": {"N": "180"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
                     "ReleasedYear": { "N": "1995"},
                     "MovieTitle": {"S": "The Shawshank Redemption"},
                     "rating": {"N": "9.3"},

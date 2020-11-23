@@ -43,4 +43,6 @@ function getByCourseID (tableName, id, courseName) {
     })
 }
 
-// copy-paste below here
+// copy-paste code below here
+// it should look like this
+// get("student-marks", 1 ).then( data => console.log(data) );

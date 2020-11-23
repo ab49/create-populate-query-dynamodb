@@ -14,10 +14,12 @@ function getAll (tableName) {
       if (err) {
         return reject(err)
       }
-      resolve(data.Items)
+      resolve(data)
     })
   })
 }
 
 // copy-paste below here
-getAll("student-marks").then( data => console.log(data) );
+// the code should look like this
+// getAll("student-marks").then( data => console.log(data) );
+

@@ -8,11 +8,14 @@ AWS.config.update({ region: 'us-west-2' })
 const client = new AWS.DynamoDB.DocumentClient()
 
 //fetch the data from json file
-const studentData = JSON.parse(fs.readFileSync('studentData.json', 'utf8'));
+const studentData = JSON.parse(fs.readFileSync('app/studentData.json', 'utf8'));
+
+function populateData(){
+  
 
 studentData.forEach(function(studentDataEach) {
   var params = {
-      TableName: "Movies",
+      TableName: "student-marks",
       Item: studentDataEach
   };
 
@@ -24,3 +27,8 @@ studentData.forEach(function(studentDataEach) {
      }
   });
 });
+}
+
+// copy-paste the code below
+// It should look like:
+// populateData();
