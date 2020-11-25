@@ -8,27 +8,27 @@ AWS.config.update({ region: 'us-west-2' })
 const client = new AWS.DynamoDB.DocumentClient()
 
 //fetch the data from json file
-const studentData = JSON.parse(fs.readFileSync('app/studentData.json', 'utf8'));
+const bookData = JSON.parse(fs.readFileSync('app/bookData.json', 'utf8'));
 
 function populateData(){
   
 
-studentData.forEach(function(studentDataEach) {
+bookData.forEach(function(bookDataEach) {
   var params = {
-      TableName: "student-marks",
-      Item: studentDataEach
+      TableName: "books-info",
+      Item: bookDataEach
   };
 
   client.put(params, function(err, data) {
      if (err) {
          console.error("Unable to add data");
      } else {
-         console.log("PutItem succeeded:", studentDataEach.StudentID );
+         console.log("PutItem succeeded:", bookDataEach.BookTitle );
      }
   });
 });
 }
 
-// copy-paste the code below
+// copy-paste the code below here
 // It should look like:
 // populateData();

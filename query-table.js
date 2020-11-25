@@ -4,12 +4,12 @@ AWS.config.update({ region: 'us-west-2' })
 
 const client = new AWS.DynamoDB.DocumentClient()
 
-function get (tableName, id) {
+function get (tableName, bookCategory) {
   const params = {
     TableName: tableName,
-    KeyConditionExpression: 'StudentID = :id',
+    KeyConditionExpression: 'BookCategory = :bookCategory',
     ExpressionAttributeValues: {
-      ':id': +id,
+      ':bookCategory': bookCategory,
     }
   }
 
@@ -23,13 +23,13 @@ function get (tableName, id) {
   })
 }
 
-function getByCourseID (tableName, id, courseName) {
+function getBookByName (tableName, bookCategory, bookTitle) {
     const params = {
       TableName: tableName,
-      KeyConditionExpression: 'StudentID = :id AND CourseName = :cn',
+      KeyConditionExpression: 'BookCategory = :bookCategory AND bookTitle = :bt',
       ExpressionAttributeValues: {
-        ':id': +id,
-        ':cn': courseName
+        ':bookCategory': bookCategory,
+        ':bt': bookTitle
       }
     }
   
@@ -45,4 +45,5 @@ function getByCourseID (tableName, id, courseName) {
 
 // copy-paste code below here
 // it should look like this
-// get("student-marks", 1 ).then( data => console.log(data) );
+// get("books-info", "Fiction" ).then( data => console.log(data) );
+

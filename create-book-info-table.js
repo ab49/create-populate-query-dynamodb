@@ -8,10 +8,10 @@ const dynamo = new AWS.DynamoDB()
 
 // Name of the table to create
 // Enter tablename as:
-// const tableName = 'student-marks';
+// const tableName = 'books-info';
 const tableName = '';
 
-createTable( tableName || 'student-marks')
+createTable( tableName || 'books-info')
 .then(data => console.log(data))
 
 function createTable (tableName) {
@@ -19,21 +19,21 @@ function createTable (tableName) {
     TableName: tableName,
     AttributeDefinitions: [
       {
-        AttributeName: 'StudentID',
-        AttributeType: 'N'
+        AttributeName: 'BookCategory',
+        AttributeType: 'S'
       },
       {
-        AttributeName: 'CourseName',
+        AttributeName: 'BookTitle',
         AttributeType: 'S'   
       }
     ],
     KeySchema: [
       {
-        AttributeName: 'StudentID',
+        AttributeName: 'BookCategory',
         KeyType: 'HASH'
       },
       {
-        AttributeName: 'CourseName',
+        AttributeName: 'BookTitle',
         KeyType: 'RANGE'
       }
     ],

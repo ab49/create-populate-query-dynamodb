@@ -21,5 +21,5 @@ function getAll (tableName) {
 
 // copy-paste below here
 // the code should look like this
-// getAll("student-marks").then( data => console.log(data) );
+// getAll("books-info").then( data => console.log(data) );
 
