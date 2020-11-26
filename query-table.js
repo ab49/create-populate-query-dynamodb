@@ -26,7 +26,7 @@ function get (tableName, bookCategory) {
 function getBookByName (tableName, bookCategory, bookTitle) {
     const params = {
       TableName: tableName,
-      KeyConditionExpression: 'BookCategory = :bookCategory AND bookTitle = :bt',
+      KeyConditionExpression: 'BookCategory = :bookCategory AND BookTitle = :bt',
       ExpressionAttributeValues: {
         ':bookCategory': bookCategory,
         ':bt': bookTitle
