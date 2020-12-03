@@ -78,6 +78,36 @@
         {
             "PutRequest": {
                 "Item": {
+                    "ReleasedYear": { "N": "2008"},
+                    "MovieTitle": {"S": "Twilight"},
+                    "rating": {"N": "5.2"},
+                    "running_time_min": {"N": "122"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "ReleasedYear": { "N": "2008"},
+                    "MovieTitle": {"S": "Iron Man"},
+                    "rating": {"N": "7.9"},
+                    "running_time_min": {"N": "126"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "ReleasedYear": { "N": "2008"},
+                    "MovieTitle": {"S": "The Curious Case of Benjamin Button"},
+                    "rating": {"N": "7.8"},
+                    "running_time_min": {"N": "166"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
                     "ReleasedYear": { "N": "1957"},
                     "MovieTitle": {"S": "12 Angry Men"},
                     "rating": {"N": "8.9"},
